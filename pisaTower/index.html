@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DGis Colosseum</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      #back {
+        position: absolute;
+        bottom: 20px;
+      }
+
+      #back i {
+        background-image: url(app/public/img/back.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 100px;
+        height: 25px;
+        padding-left: 25px;
+        padding-top: 2px;
+        margin: 10px;
+        cursor: pointer;
+        background-size: 20px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.24/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.24/"></script>
+    <script>
+      require([
+        'esri/Map',
+        'esri/views/SceneView',
+        'esri/layers/GeoJSONLayer',
+        'esri/layers/SceneLayer',
+        'esri/layers/GraphicsLayer',
+        'esri/Graphic',
+        'esri/request',
+        'esri/geometry/Circle',
+      ], function (
+        Map,
+        SceneView,
+        GeoJSONLayer,
+        SceneLayer,
+        GraphicsLayer,
+        Graphic,
+        esriRequest,
+        Circle
+      ) {
+        var createGraphic = function (data) {
+          return new Graphic({
+            geometry: data,
+            symbol: data.symbol,
+            attributes: data,
+            popupTemplate: data.popupTemplate,
+          });
+        };
+
+//khoi tao url
+        const fl1 = new GeoJSONLayer({
+          url: 'floor/fl1.geojson',
+        });
+        const fl1_class = new GeoJSONLayer({
+          url: 'floor/fl1_class.geojson',
+        });
+        const pillar_fl1_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl1_detail1.geojson',
+        });
+        const pillar_fl1 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl1.geojson',
+        });
+        const pillar_fl1_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl1_detail2.geojson',
+        });
+        const wall_fl1 = new GeoJSONLayer({
+          url: 'wall/wall_fl1.geojson'
+        })
+        const arc_fl1 = new GeoJSONLayer({
+          url: 'arc/arc_fl1.geojson'
+        })
+        const fl2 = new GeoJSONLayer({
+          url: 'floor/fl2.geojson',
+        });
+        const pillar_fl2_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl2_detail1.geojson',
+        });
+        const pillar_fl2 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl2.geojson',
+        });
+        const wall_fl2_3_4_5_6 = new GeoJSONLayer({
+          url: 'wall/wall_fl2_3_4_5_6.geojson'
+        })
+//render 
+        fl1.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 18.1,
+                height: 0.88,
+                profile: 'quad',
+                material: {
+                  color: 'red',
+                },
+              },
+            ],
+          },
+        };
+        fl1_class.renderer = {
+          type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'object',
+                width: 18.01,
+                roll: 180,
+                resource: { primitive: 'inverted-cone' },
+                size: 17.12,
+                deep: 0,
+                material: {
+                  color: '#DEC17F',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl1_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.63,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 5.68,
+                width: 0.6,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl1_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.1,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        wall_fl1.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 14.28,
+                height: 7.22,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl1.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.6,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        //fl2 
+        fl2.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 15.6,
+                height: 0.37,
+                profile: 'quad',
+                material: {
+                  color: 'red',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl2_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.14,
+                width: 14.13,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 3.98,
+                width: 0.46,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        wall_fl2_3_4_5_6.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 12.22,
+                height: 27.6,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+
+//map
+        const map = new Map({
+          basemap: 'topo-vector',
+          layers: [
+          fl1,
+          fl1_class,
+          pillar_fl1_detail1,
+          pillar_fl1,
+          pillar_fl1_detail2,
+          wall_fl1,
+          arc_fl1,
+          fl2,
+          pillar_fl2_detail1,
+          pillar_fl2,
+          wall_fl2_3_4_5_6
+        ]
+        });
+        const view = new SceneView({
+          container: 'viewDiv',
+          map: map,
+          center: [10.389831774,43.720663784],
+          camera: {
+            position: [10.389831774,43.720663784,90],
+            heading: 120,
+            tilt: 60,
+          },
+          zoom: 100,
+        });
+
+        view.popup.defaultPopupTemplateEnabled = true;
+      });
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
