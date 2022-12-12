@@ -100,6 +100,9 @@
         const pillar_fl2 = new GeoJSONLayer({
           url: 'pillar/pillar_fl2.geojson',
         });
+        const pillar_fl2_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl2_detail2.geojson',
+        });
         const wall_fl2_3_4_5_6 = new GeoJSONLayer({
           url: 'wall/wall_fl2_3_4_5_6.geojson'
         })
@@ -186,7 +189,7 @@
             symbolLayers: [
               {
                 type: 'extrude',
-                size: 0.1,
+                size: 0.2,
                 width: 1,
                 material: {
                   color: 'yellow',
@@ -282,6 +285,22 @@
             ],
           },
         };
+        pillar_fl2_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
         wall_fl2_3_4_5_6.renderer = {
           type: 'simple',
           color: '#93643C',
@@ -308,8 +327,8 @@
             symbolLayers: [
               {
                 type: 'path',
-                width: 0.72,
-                height: 1,
+                width: 0.28,
+                height: 0.3,
                 profile: 'quad',
                 material: {
                   color: 'yellow',
@@ -317,6 +336,23 @@
               },
             ],
           },
+
+          // type: 'simple',
+          // color: '#cacac4',
+          // symbol: {
+          //   type: 'line-3d',
+          //   symbolLayers: [
+          //     {
+          //       type: 'path',
+          //       width: 0.28,
+          //       height: 0.6,
+          //       profile: 'quad',
+          //       material: {
+          //         color: 'yellow',
+          //       },
+          //     },
+          //   ],
+          // },
         };
         fl3.renderer = {
           type: 'simple',
@@ -351,6 +387,7 @@
           fl2,
           pillar_fl2_detail1,
           pillar_fl2,
+          pillar_fl2_detail2,
           wall_fl2_3_4_5_6,
           arc_fl2,
           fl3,
