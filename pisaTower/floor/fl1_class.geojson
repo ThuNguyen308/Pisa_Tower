@@ -2,7 +2,7 @@
 "features":[
   {
     "type": "Feature",
-    "properties": { "Pillar Number": 1, "height": 1 },
+    "properties": { "Pillar Number": 1, "height": 2},
     "geometry": {
       "type": "Polygon",
       "coordinates": [

@@ -103,6 +103,12 @@
         const wall_fl2_3_4_5_6 = new GeoJSONLayer({
           url: 'wall/wall_fl2_3_4_5_6.geojson'
         })
+        const arc_fl2 = new GeoJSONLayer({
+          url: 'arc/arc_fl2.geojson'
+        });
+        const fl3 = new GeoJSONLayer({
+          url: 'floor/fl3.geojson'
+        });
 //render 
         fl1.renderer = {
           type: 'simple',
@@ -112,11 +118,11 @@
             symbolLayers: [
               {
                 type: 'path',
-                width: 18.1,
+                width: 9.05,
                 height: 0.88,
                 profile: 'quad',
                 material: {
-                  color: 'red',
+                  color: 'white',
                 },
               },
             ],
@@ -167,7 +173,7 @@
                 size: 5.68,
                 width: 0.6,
                 material: {
-                  color: 'yellow',
+                  color: 'black',
                 },
               },
             ],
@@ -197,7 +203,7 @@
             symbolLayers: [
               {
                 type: 'path',
-                width: 14.28,
+                width: 7.14,
                 height: 7.22,
                 profile: 'quad',
                 material: {
@@ -234,7 +240,7 @@
             symbolLayers: [
               {
                 type: 'path',
-                width: 15.6,
+                width: 7.8,
                 height: 0.37,
                 profile: 'quad',
                 material: {
@@ -252,7 +258,7 @@
               {
                 type: 'extrude',
                 size: 0.14,
-                width: 14.13,
+                width: 0.71,
                 material: {
                   color: 'yellow',
                 },
@@ -284,8 +290,44 @@
             symbolLayers: [
               {
                 type: 'path',
-                width: 12.22,
+                width: 6.11,
                 height: 27.6,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl2.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.72,
+                height: 1,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        fl3.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.8,
+                height: 0.37,
                 profile: 'quad',
                 material: {
                   color: 'white',
@@ -297,7 +339,7 @@
 
 //map
         const map = new Map({
-          basemap: 'topo-vector',
+          basemap: 'hybrid',
           layers: [
           fl1,
           fl1_class,
@@ -309,15 +351,18 @@
           fl2,
           pillar_fl2_detail1,
           pillar_fl2,
-          wall_fl2_3_4_5_6
+          wall_fl2_3_4_5_6,
+          arc_fl2,
+          fl3,
+          //continue
         ]
         });
         const view = new SceneView({
           container: 'viewDiv',
           map: map,
-          center: [10.389831774,43.720663784],
+          center: [10.396618218154552, 43.722999261328276],
           camera: {
-            position: [10.389831774,43.720663784,90],
+            position: [10.396618218154552, 43.722999261328276, 0],
             heading: 120,
             tilt: 60,
           },
