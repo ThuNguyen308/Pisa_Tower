@@ -94,20 +94,92 @@
         const fl2 = new GeoJSONLayer({
           url: 'floor/fl2.geojson',
         });
+        const fl4 = new GeoJSONLayer({
+          url: 'floor/fl4.geojson',
+        });
+        const fl5 = new GeoJSONLayer({
+          url: 'floor/fl5.geojson',
+        });
+        const fl6 = new GeoJSONLayer({
+          url: 'floor/fl6.geojson',
+        });
+        const fl7 = new GeoJSONLayer({
+          url: 'floor/fl7.geojson',
+        });
         const pillar_fl2_detail1 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl2_detail1.geojson',
+        });
+        const pillar_fl3_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl3_detail1.geojson',
+        });
+        const pillar_fl4_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl4_detail1.geojson',
+        });
+        const pillar_fl5_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl5_detail1.geojson',
+        });
+        const pillar_fl6_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl6_detail1.geojson',
+        });
+        const pillar_fl7_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl7_detail1.geojson',
         });
         const pillar_fl2 = new GeoJSONLayer({
           url: 'pillar/pillar_fl2.geojson',
         });
+        const pillar_fl3 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl3.geojson',
+        });
+        const pillar_fl4 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl4.geojson',
+        });
+        const pillar_fl5 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl5.geojson',
+        });
+        const pillar_fl6 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl6.geojson',
+        });
+        const pillar_fl7 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl7.geojson',
+        });
         const pillar_fl2_detail2 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl2_detail2.geojson',
+        });
+        const pillar_fl3_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl3_detail2.geojson',
+        });
+        const pillar_fl4_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl4_detail2.geojson',
+        });
+        const pillar_fl5_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl5_detail2.geojson',
+        });
+        const pillar_fl6_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl6_detail2.geojson',
+        });
+        const pillar_fl7_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl7_detail2.geojson',
         });
         const wall_fl2_3_4_5_6 = new GeoJSONLayer({
           url: 'wall/wall_fl2_3_4_5_6.geojson'
         })
         const arc_fl2 = new GeoJSONLayer({
           url: 'arc/arc_fl2.geojson'
+        });
+        const arc_fl3 = new GeoJSONLayer({
+          url: 'arc/arc_fl3.geojson'
+        });
+        const arc_fl4 = new GeoJSONLayer({
+          url: 'arc/arc_fl4.geojson'
+        });
+        const arc_fl5 = new GeoJSONLayer({
+          url: 'arc/arc_fl5.geojson'
+        });
+        const arc_fl6 = new GeoJSONLayer({
+          url: 'arc/arc_fl6.geojson'
+        });
+        const arc_fl7 = new GeoJSONLayer({
+          url: 'arc/arc_fl7.geojson'
         });
         const fl3 = new GeoJSONLayer({
           url: 'floor/fl3.geojson'
@@ -247,13 +319,165 @@
                 height: 0.37,
                 profile: 'quad',
                 material: {
-                  color: 'red',
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl4.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.8,
+                height: 0.37,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl5.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.8,
+                height: 0.37,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl6.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.8,
+                height: 0.37,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl7.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.8,
+                height: 0.37,
+                profile: 'quad',
+                material: {
+                  color: 'white',
                 },
               },
             ],
           },
         };
         pillar_fl2_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.14,
+                width: 0.71,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl3_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.14,
+                width: 0.71,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl4_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.14,
+                width: 0.71,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl5_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.14,
+                width: 0.71,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl6_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.14,
+                width: 0.71,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl7_detail1.renderer = {
             type: 'simple',
           symbol: {
             type: 'polygon-3d',
@@ -285,7 +509,167 @@
             ],
           },
         };
+        pillar_fl3.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 3.98,
+                width: 0.46,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl4.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 3.98,
+                width: 0.46,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl5.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 3.98,
+                width: 0.46,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl6.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 3.98,
+                width: 0.46,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl7.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 3.98,
+                width: 0.46,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
         pillar_fl2_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl3_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl4_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl5_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl6_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 1,
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl7_detail2.renderer = {
             type: 'simple',
           symbol: {
             type: 'polygon-3d',
@@ -336,23 +720,96 @@
               },
             ],
           },
-
-          // type: 'simple',
-          // color: '#cacac4',
-          // symbol: {
-          //   type: 'line-3d',
-          //   symbolLayers: [
-          //     {
-          //       type: 'path',
-          //       width: 0.28,
-          //       height: 0.6,
-          //       profile: 'quad',
-          //       material: {
-          //         color: 'yellow',
-          //       },
-          //     },
-          //   ],
-          // },
+        };
+        arc_fl3.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl4.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl5.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl6.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl7.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: 'yellow',
+                },
+              },
+            ],
+          },
         };
         fl3.renderer = {
           type: 'simple',
@@ -378,6 +835,7 @@
           basemap: 'hybrid',
           layers: [
           fl1,
+          fl2, fl3, fl4, fl5, fl6, fl7,
           fl1_class,
           pillar_fl1_detail1,
           pillar_fl1,
@@ -386,10 +844,30 @@
           arc_fl1,
           fl2,
           pillar_fl2_detail1,
+          pillar_fl3_detail1,
+          pillar_fl4_detail1,
+          pillar_fl5_detail1,
+          pillar_fl6_detail1,
+          pillar_fl7_detail1,
           pillar_fl2,
+          pillar_fl3,
+          pillar_fl4,
+          pillar_fl5,
+          pillar_fl6,
+          pillar_fl7,
           pillar_fl2_detail2,
+          pillar_fl3_detail2,
+          pillar_fl4_detail2,
+          pillar_fl5_detail2,
+          pillar_fl6_detail2,
+          pillar_fl7_detail2,
           wall_fl2_3_4_5_6,
           arc_fl2,
+          arc_fl3,
+          arc_fl4,
+          arc_fl5,
+          arc_fl6,
+          arc_fl7,
           fl3,
           //continue
         ]
@@ -403,7 +881,7 @@
             heading: 120,
             tilt: 60,
           },
-          zoom: 100,
+          zoom: 80,
         });
 
         view.popup.defaultPopupTemplateEnabled = true;
