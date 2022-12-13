@@ -73,9 +73,7 @@
         const fl1 = new GeoJSONLayer({
           url: 'floor/fl1.geojson',
         });
-        const fl1_2 = new GeoJSONLayer({
-          url: 'floor/fl1_2.geojson',
-        });
+
         const fl1_class = new GeoJSONLayer({
           url: 'floor/fl1_class.geojson',
         });
@@ -212,7 +210,7 @@
             ],
           },
         };
-        fl1_2.renderer = {
+        fl1_class.renderer = {
           type: 'simple',
           color: '#93643C',
           symbol: {
@@ -230,7 +228,7 @@
             ],
           },
         };
-        fl1_class.renderer = {
+        /*fl1_class.renderer = {
           type: 'simple',
           symbol: {
             type: 'polygon-3d',
@@ -248,7 +246,7 @@
               },
             ],
           },
-        };
+        };*/
         pillar_fl1_detail1.renderer = {
             type: 'simple',
           symbol: {
@@ -898,7 +896,6 @@
           basemap: 'hybrid',
           layers: [
           fl1,
-          fl1_2,
           fl2, fl3, fl4, fl5, fl6, fl7, fl8,
           fl1_class,
           pillar_fl1_detail1,
