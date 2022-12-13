@@ -73,6 +73,9 @@
         const fl1 = new GeoJSONLayer({
           url: 'floor/fl1.geojson',
         });
+        const fl1_2 = new GeoJSONLayer({
+          url: 'floor/fl1_2.geojson',
+        });
         const fl1_class = new GeoJSONLayer({
           url: 'floor/fl1_class.geojson',
         });
@@ -203,7 +206,25 @@
                 height: 0.88,
                 profile: 'quad',
                 material: {
-                  color: 'white',
+                  color: '#5e5f61',
+                },
+              },
+            ],
+          },
+        };
+        fl1_2.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 9.05,
+                height: 1.25,
+                profile: 'quad',
+                material: {
+                  color: '#898a8e',
                 },
               },
             ],
@@ -877,6 +898,7 @@
           basemap: 'hybrid',
           layers: [
           fl1,
+          fl1_2,
           fl2, fl3, fl4, fl5, fl6, fl7, fl8,
           fl1_class,
           pillar_fl1_detail1,
@@ -918,9 +940,9 @@
         const view = new SceneView({
           container: 'viewDiv',
           map: map,
-          center: [10.396618218154552, 43.722999261328276],
+          center: [10.396648645027895, 43.72299823555844],
           camera: {
-            position: [10.396618218154552, 43.722999261328276, 0],
+            position: [10.396648645027895, 43.72299823555844, 0],
             heading: 120,
             tilt: 60,
           },
