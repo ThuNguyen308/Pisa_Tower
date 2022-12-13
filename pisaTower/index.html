@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3DGis Colosseum</title>
+    <title>Pisa Tower</title>
 
     <style>
       html,
@@ -88,6 +88,9 @@
         const wall_fl1 = new GeoJSONLayer({
           url: 'wall/wall_fl1.geojson'
         })
+        const wall_fl8 = new GeoJSONLayer({
+          url: 'wall/wall_fl8.geojson'
+        })
         const arc_fl1 = new GeoJSONLayer({
           url: 'arc/arc_fl1.geojson'
         })
@@ -105,6 +108,9 @@
         });
         const fl7 = new GeoJSONLayer({
           url: 'floor/fl7.geojson',
+        });
+        const fl8 = new GeoJSONLayer({
+          url: 'floor/fl8.geojson',
         });
         const pillar_fl2_detail1 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl2_detail1.geojson',
@@ -161,7 +167,7 @@
           url: 'pillar_detail/pillar_fl7_detail2.geojson',
         });
         const wall_fl2_3_4_5_6 = new GeoJSONLayer({
-          url: 'wall/wall_fl2_3_4_5_6.geojson'
+          url: 'wall/wall_fl2_3_4_5_6_7.geojson'
         })
         const arc_fl2 = new GeoJSONLayer({
           url: 'arc/arc_fl2.geojson'
@@ -288,6 +294,24 @@
             ],
           },
         };
+        wall_fl8.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 5,
+                height: 7,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
         arc_fl1.renderer = {
           type: 'simple',
           color: '#cacac4',
@@ -380,6 +404,24 @@
           },
         };
         fl7.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.8,
+                height: 0.37,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl8.renderer = {
           type: 'simple',
           color: '#93643C',
           symbol: {
@@ -694,7 +736,7 @@
               {
                 type: 'path',
                 width: 6.11,
-                height: 27.6,
+                height: 40,
                 profile: 'quad',
                 material: {
                   color: 'white',
@@ -835,12 +877,13 @@
           basemap: 'hybrid',
           layers: [
           fl1,
-          fl2, fl3, fl4, fl5, fl6, fl7,
+          fl2, fl3, fl4, fl5, fl6, fl7, fl8,
           fl1_class,
           pillar_fl1_detail1,
           pillar_fl1,
           pillar_fl1_detail2,
           wall_fl1,
+          wall_fl8,
           arc_fl1,
           fl2,
           pillar_fl2_detail1,
