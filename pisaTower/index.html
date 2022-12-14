@@ -50,6 +50,7 @@
         'esri/Graphic',
         'esri/request',
         'esri/geometry/Circle',
+        'esri/symbols/LineSymbol3DLayer',
       ], function (
         Map,
         SceneView,
@@ -274,7 +275,24 @@
         const fl8_stair5 = new GeoJSONLayer({
           url: 'floor/fl8_stair5.geojson',
         });
-
+        const pillar_fl8_fence = new GeoJSONLayer({
+          url: 'pillar/pillar_fl8_fence.geojson',
+        });
+        const pillar_fl8_fence_detail = new GeoJSONLayer({
+          url: 'pillar/pillar_fl8_fence_detail.geojson',
+        });
+        const wall_fl8_fence1 = new GeoJSONLayer({
+          url: 'wall/wall_fl8_fence1.geojson'
+        })
+        const wall_fl8_fence2 = new GeoJSONLayer({
+          url: 'wall/wall_fl8_fence2.geojson'
+        })
+        const wall_fl8_fence3 = new GeoJSONLayer({
+          url: 'wall/wall_fl8_fence3.geojson'
+        })
+        const wall_fl8_fence4 = new GeoJSONLayer({
+          url: 'wall/wall_fl8_fence4.geojson'
+        })
 //render 
         fl1.renderer = {
           type: 'simple',
@@ -1472,6 +1490,119 @@
             ],
           },
         };
+        pillar_fl8_fence.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 2.55,
+                width: 0.01,
+                material: {
+                  color: '#493928',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl8_fence_detail.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.08,
+                width: 1,
+                material: {
+                  color: 'black',
+                },
+              },
+            ],
+          },
+        };
+        wall_fl8_fence1.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: "line",  // autocasts as new LineSymbol3DLayer()
+                size: 6,  // points
+                material: { color: "#493928" },
+                cap: "round",
+                join: "round",
+                pattern: {  // autocasts as new LineStylePattern3D()
+                  type: "style",
+                  style: "solid"
+                },
+
+              },
+            ],
+          },
+        };
+        wall_fl8_fence2.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: "line",  // autocasts as new LineSymbol3DLayer()
+                size: 6,  // points
+                material: { color: "#493928" },
+                cap: "round",
+                join: "round",
+                pattern: {  // autocasts as new LineStylePattern3D()
+                  type: "style",
+                  style: "solid"
+                },
+              },
+            ],
+          },
+        };
+        wall_fl8_fence3.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: "line",  // autocasts as new LineSymbol3DLayer()
+                size: 6,  // points
+                material: { color: "#493928" },
+                cap: "round",
+                join: "round",
+                pattern: {  // autocasts as new LineStylePattern3D()
+                  type: "style",
+                  style: "solid"
+                },
+              },
+            ],
+          },
+        };
+        wall_fl8_fence4.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: "line",  // autocasts as new LineSymbol3DLayer()
+                size: 6,  // points
+                material: { color: "#493928" },
+                cap: "round",
+                join: "round",
+                pattern: {  // autocasts as new LineStylePattern3D()
+                  type: "style",
+                  style: "solid"
+                },
+              },
+            ],
+          },
+        };
 
 //map
         const map = new Map({
@@ -1485,6 +1616,7 @@
           pillar_fl1_detail2,
           wall_fl1,
           wall_fl8,
+          wall_fl8_fence1,wall_fl8_fence2,wall_fl8_fence3,wall_fl8_fence4,
           arc_fl1,
           arc_fl1_1,
           
@@ -1503,6 +1635,8 @@
           pillar_fl6,
           pillar_fl7,
           pillar_fl8,
+          pillar_fl8_fence,
+          pillar_fl8_fence_detail,
           pillar_fl2_detail2,
           pillar_fl3_detail2,
           pillar_fl4_detail2,
@@ -1546,7 +1680,7 @@
           map: map,
           center: [10.396648645027895, 43.72299823555844],
           camera: {
-            position: [10.396648645027895, 43.72299823555844, 3],
+            position: [10.396534082042711, 43.72298972449709, 20],
             heading: 120,
             tilt: 60,
           },
