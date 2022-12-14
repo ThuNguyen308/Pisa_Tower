@@ -94,9 +94,6 @@
         const wall_fl1 = new GeoJSONLayer({
           url: 'wall/wall_fl1.geojson'
         })
-        const wall_fl8 = new GeoJSONLayer({
-          url: 'wall/wall_fl8.geojson'
-        })
         const arc_fl1 = new GeoJSONLayer({
           url: 'arc/arc_fl1.geojson'
         })
@@ -136,6 +133,12 @@
         const fl8 = new GeoJSONLayer({
           url: 'floor/fl8.geojson',
         });
+        const fl8_1 = new GeoJSONLayer({
+          url: 'floor/fl8_1.geojson',
+        });
+        const fl8_2 = new GeoJSONLayer({
+          url: 'floor/fl8_2.geojson',
+        });
         const pillar_fl2_detail1 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl2_detail1.geojson',
         });
@@ -153,6 +156,9 @@
         });
         const pillar_fl7_detail1 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl7_detail1.geojson',
+        });
+        const pillar_fl8_detail1 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl8_detail1.geojson',
         });
         const pillar_fl2 = new GeoJSONLayer({
           url: 'pillar/pillar_fl2.geojson',
@@ -172,6 +178,9 @@
         const pillar_fl7 = new GeoJSONLayer({
           url: 'pillar/pillar_fl7.geojson',
         });
+        const pillar_fl8 = new GeoJSONLayer({
+          url: 'pillar/pillar_fl8.geojson',
+        });
         const pillar_fl2_detail2 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl2_detail2.geojson',
         });
@@ -190,8 +199,14 @@
         const pillar_fl7_detail2 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl7_detail2.geojson',
         });
+        const pillar_fl8_detail2 = new GeoJSONLayer({
+          url: 'pillar_detail/pillar_fl8_detail2.geojson',
+        });
         const wall_fl2_3_4_5_6 = new GeoJSONLayer({
           url: 'wall/wall_fl2_3_4_5_6_7.geojson'
+        })
+        const wall_fl8 = new GeoJSONLayer({
+          url: 'wall/wall_fl8.geojson'
         })
         const arc_fl2 = new GeoJSONLayer({
           url: 'arc/arc_fl2.geojson'
@@ -228,6 +243,9 @@
         });
         const arc_fl7_1 = new GeoJSONLayer({
           url: 'arc/arc_fl7_1.geojson'
+        });
+        const arc_fl8 = new GeoJSONLayer({
+          url: 'arc/arc_fl8.geojson'
         });
         const fl3 = new GeoJSONLayer({
           url: 'floor/fl3.geojson'
@@ -385,24 +403,6 @@
                 type: 'path',
                 width: 7.14,
                 height: 7.22,
-                profile: 'quad',
-                material: {
-                  color: 'white',
-                },
-              },
-            ],
-          },
-        };
-        wall_fl8.renderer = {
-          type: 'simple',
-          color: '#93643C',
-          symbol: {
-            type: 'line-3d',
-            symbolLayers: [
-              {
-                type: 'path',
-                width: 5,
-                height: 7,
                 profile: 'quad',
                 material: {
                   color: 'white',
@@ -646,6 +646,42 @@
             ],
           },
         };
+        fl8_1.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 6.09,
+                height: 0.29,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl8_2.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 5.14,
+                height: 0.51,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
         pillar_fl2_detail1.renderer = {
             type: 'simple',
           symbol: {
@@ -735,6 +771,22 @@
                 type: 'extrude',
                 size: 0.14,
                 width: 0.71,
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
+        pillar_fl8_detail1.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.49,
+                width: 0.78,
                 material: {
                   color: '#acadb1',
                 },
@@ -838,6 +890,22 @@
             ],
           },
         };
+        pillar_fl8.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 4.55,
+                width: 0.5,
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         pillar_fl2_detail2.renderer = {
             type: 'simple',
           symbol: {
@@ -934,6 +1002,22 @@
             ],
           },
         };
+        pillar_fl8_detail2.renderer = {
+            type: 'simple',
+          symbol: {
+            type: 'polygon-3d',
+            symbolLayers: [
+              {
+                type: 'extrude',
+                size: 0.15,
+                width: 0.71,
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         wall_fl2_3_4_5_6.renderer = {
           type: 'simple',
           color: '#93643C',
@@ -944,6 +1028,24 @@
                 type: 'path',
                 width: 6.11,
                 height: 40,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        wall_fl8.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 5.57,
+                height: 5.64,
                 profile: 'quad',
                 material: {
                   color: 'white',
@@ -1150,24 +1252,6 @@
             ],
           },
         };
-        arc_fl7_1.renderer = {
-          type: 'simple',
-          color: '#cacac4',
-          symbol: {
-            type: 'line-3d',
-            symbolLayers: [
-              {
-                type: 'path',
-                width: 0.28,
-                height: 0.3,
-                profile: 'quad',
-                material: {
-                  color: '#acadb1',
-                },
-              },
-            ],
-          },
-        };
         fl3.renderer = {
           type: 'simple',
           color: '#93643C',
@@ -1186,32 +1270,14 @@
             ],
           },
         };
-        fl3_class.renderer = {
-          type: 'simple',
-          color: '#93643C',
-          symbol: {
-            type: 'line-3d',
-            symbolLayers: [
-              {
-                type: 'path',
-                width: 7.365,
-                height: 0.8,
-                profile: 'quad',
-                material: {
-                  color: '#acadb1',
-                },
-              },
-            ],
-          },
-        };
 
 //map
         const map = new Map({
           basemap: 'hybrid',
           layers: [
-          fl1,fl1_2,
+          fl1,
           fl2, fl3, fl4, fl5, fl6, fl7, fl8,
-          fl1_class1,fl1_class2,
+          fl1_class,
           pillar_fl1_detail1,
           pillar_fl1,
           pillar_fl1_detail2,
@@ -1227,18 +1293,21 @@
           pillar_fl5_detail1,
           pillar_fl6_detail1,
           pillar_fl7_detail1,
+          pillar_fl8_detail1,
           pillar_fl2,
           pillar_fl3,
           pillar_fl4,
           pillar_fl5,
           pillar_fl6,
           pillar_fl7,
+          pillar_fl8,
           pillar_fl2_detail2,
           pillar_fl3_detail2,
           pillar_fl4_detail2,
           pillar_fl5_detail2,
           pillar_fl6_detail2,
           pillar_fl7_detail2,
+          pillar_fl8_detail2,
           wall_fl2_3_4_5_6,
           arc_fl2,
           
@@ -1247,6 +1316,7 @@
           arc_fl5,
           arc_fl6,
           arc_fl7,
+          arc_fl8,
           fl3,
           fl2_class,
           fl3_class,
