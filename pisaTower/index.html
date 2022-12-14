@@ -259,6 +259,22 @@
         const fl3_class = new GeoJSONLayer({
           url: 'floor/fl3_class.geojson',
         });
+        const fl8_stair1 = new GeoJSONLayer({
+          url: 'floor/fl8_stair1.geojson',
+        });
+        const fl8_stair2 = new GeoJSONLayer({
+          url: 'floor/fl8_stair2.geojson',
+        });
+        const fl8_stair3 = new GeoJSONLayer({
+          url: 'floor/fl8_stair3.geojson',
+        });
+        const fl8_stair4 = new GeoJSONLayer({
+          url: 'floor/fl8_stair4.geojson',
+        });
+        const fl8_stair5 = new GeoJSONLayer({
+          url: 'floor/fl8_stair5.geojson',
+        });
+
 //render 
         fl1.renderer = {
           type: 'simple',
@@ -1366,6 +1382,96 @@
             ],
           },
         };
+        fl8_stair1.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.2,
+                height: 0.32,
+                profile: 'quad',
+                material: {
+                  color: '#f3f3f3',
+                },
+              },
+            ],
+          },
+        };
+        fl8_stair2.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 6.8,
+                height: 0.32,
+                profile: 'quad',
+                material: {
+                  color: '#f3f3f3',
+                },
+              },
+            ],
+          },
+        };
+        fl8_stair3.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 6.4,
+                height: 0.32,
+                profile: 'quad',
+                material: {
+                  color: '#f3f3f3',
+                },
+              },
+            ],
+          },
+        };
+        fl8_stair4.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 6,
+                height: 0.32,
+                profile: 'quad',
+                material: {
+                  color: '#f3f3f3',
+                },
+              },
+            ],
+          },
+        };
+        fl8_stair5.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 5.6,
+                height: 0.12,
+                profile: 'quad',
+                material: {
+                  color: 'white',
+                },
+              },
+            ],
+          },
+        };
 
 //map
         const map = new Map({
@@ -1427,6 +1533,11 @@
           arc_fl6_1,
           arc_fl7_1,
           arc_fl8_1,
+          fl8_stair1,
+          fl8_stair2,
+          fl8_stair3,
+          fl8_stair4,
+          fl8_stair5,
           //continue
         ]
         });
