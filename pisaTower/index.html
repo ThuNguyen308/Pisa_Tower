@@ -73,9 +73,14 @@
         const fl1 = new GeoJSONLayer({
           url: 'floor/fl1.geojson',
         });
-
-        const fl1_class = new GeoJSONLayer({
-          url: 'floor/fl1_class.geojson',
+        const fl1_2 = new GeoJSONLayer({
+          url: 'floor/fl1_2.geojson',
+        });
+        const fl1_class1 = new GeoJSONLayer({
+          url: 'floor/fl1_class1.geojson',
+        });
+        const fl1_class2 = new GeoJSONLayer({
+          url: 'floor/fl1_class2.geojson',
         });
         const pillar_fl1_detail1 = new GeoJSONLayer({
           url: 'pillar_detail/pillar_fl1_detail1.geojson',
@@ -95,20 +100,38 @@
         const arc_fl1 = new GeoJSONLayer({
           url: 'arc/arc_fl1.geojson'
         })
+        const arc_fl1_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl1_1.geojson'
+        })
         const fl2 = new GeoJSONLayer({
           url: 'floor/fl2.geojson',
+        });
+        const fl2_class = new GeoJSONLayer({
+          url: 'floor/fl2_class.geojson',
         });
         const fl4 = new GeoJSONLayer({
           url: 'floor/fl4.geojson',
         });
+        const fl4_class = new GeoJSONLayer({
+          url: 'floor/fl4_class.geojson',
+        });
         const fl5 = new GeoJSONLayer({
           url: 'floor/fl5.geojson',
+        });
+        const fl5_class = new GeoJSONLayer({
+          url: 'floor/fl5_class.geojson',
         });
         const fl6 = new GeoJSONLayer({
           url: 'floor/fl6.geojson',
         });
+        const fl6_class = new GeoJSONLayer({
+          url: 'floor/fl6_class.geojson',
+        });
         const fl7 = new GeoJSONLayer({
           url: 'floor/fl7.geojson',
+        });
+        const fl7_class = new GeoJSONLayer({
+          url: 'floor/fl7_class.geojson',
         });
         const fl8 = new GeoJSONLayer({
           url: 'floor/fl8.geojson',
@@ -173,23 +196,44 @@
         const arc_fl2 = new GeoJSONLayer({
           url: 'arc/arc_fl2.geojson'
         });
+        const arc_fl2_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl2_1.geojson'
+        });
         const arc_fl3 = new GeoJSONLayer({
           url: 'arc/arc_fl3.geojson'
+        });
+        const arc_fl3_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl3_1.geojson'
         });
         const arc_fl4 = new GeoJSONLayer({
           url: 'arc/arc_fl4.geojson'
         });
+        const arc_fl4_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl4_1.geojson'
+        });
         const arc_fl5 = new GeoJSONLayer({
           url: 'arc/arc_fl5.geojson'
+        });
+        const arc_fl5_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl5_1.geojson'
         });
         const arc_fl6 = new GeoJSONLayer({
           url: 'arc/arc_fl6.geojson'
         });
+        const arc_fl6_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl6_1.geojson'
+        });
         const arc_fl7 = new GeoJSONLayer({
           url: 'arc/arc_fl7.geojson'
         });
+        const arc_fl7_1 = new GeoJSONLayer({
+          url: 'arc/arc_fl7_1.geojson'
+        });
         const fl3 = new GeoJSONLayer({
           url: 'floor/fl3.geojson'
+        });
+        const fl3_class = new GeoJSONLayer({
+          url: 'floor/fl3_class.geojson',
         });
 //render 
         fl1.renderer = {
@@ -210,7 +254,7 @@
             ],
           },
         };
-        fl1_class.renderer = {
+        fl1_2.renderer = {
           type: 'simple',
           color: '#93643C',
           symbol: {
@@ -223,6 +267,42 @@
                 profile: 'quad',
                 material: {
                   color: '#898a8e',
+                },
+              },
+            ],
+          },
+        };
+        fl1_class1.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.44,
+                height: 0.5,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
+        fl1_class2.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.44,
+                height: 0.5,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
                 },
               },
             ],
@@ -349,6 +429,24 @@
             ],
           },
         };
+        arc_fl1_1.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.6,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         //fl2 
         fl2.renderer = {
           type: 'simple',
@@ -363,6 +461,24 @@
                 profile: 'quad',
                 material: {
                   color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl2_class.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.365,
+                height: 0.8,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
                 },
               },
             ],
@@ -386,6 +502,24 @@
             ],
           },
         };
+        fl4_class.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.365,
+                height: 0.8,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         fl5.renderer = {
           type: 'simple',
           color: '#93643C',
@@ -399,6 +533,24 @@
                 profile: 'quad',
                 material: {
                   color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl5_class.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.365,
+                height: 0.8,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
                 },
               },
             ],
@@ -422,6 +574,24 @@
             ],
           },
         };
+        fl6_class.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.365,
+                height: 0.8,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         fl7.renderer = {
           type: 'simple',
           color: '#93643C',
@@ -435,6 +605,24 @@
                 profile: 'quad',
                 material: {
                   color: 'white',
+                },
+              },
+            ],
+          },
+        };
+        fl7_class.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.365,
+                height: 0.8,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
                 },
               },
             ],
@@ -782,7 +970,43 @@
             ],
           },
         };
+        arc_fl2_1.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         arc_fl3.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl3_1.renderer = {
           type: 'simple',
           color: '#cacac4',
           symbol: {
@@ -818,7 +1042,43 @@
             ],
           },
         };
+        arc_fl4_1.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         arc_fl5.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl5_1.renderer = {
           type: 'simple',
           color: '#cacac4',
           symbol: {
@@ -854,7 +1114,43 @@
             ],
           },
         };
+        arc_fl6_1.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
         arc_fl7.renderer = {
+          type: 'simple',
+          color: '#cacac4',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 0.28,
+                height: 0.3,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
+        arc_fl7_1.renderer = {
           type: 'simple',
           color: '#cacac4',
           symbol: {
@@ -890,21 +1186,41 @@
             ],
           },
         };
+        fl3_class.renderer = {
+          type: 'simple',
+          color: '#93643C',
+          symbol: {
+            type: 'line-3d',
+            symbolLayers: [
+              {
+                type: 'path',
+                width: 7.365,
+                height: 0.8,
+                profile: 'quad',
+                material: {
+                  color: '#acadb1',
+                },
+              },
+            ],
+          },
+        };
 
 //map
         const map = new Map({
           basemap: 'hybrid',
           layers: [
-          fl1,
+          fl1,fl1_2,
           fl2, fl3, fl4, fl5, fl6, fl7, fl8,
-          fl1_class,
+          fl1_class1,fl1_class2,
           pillar_fl1_detail1,
           pillar_fl1,
           pillar_fl1_detail2,
           wall_fl1,
           wall_fl8,
           arc_fl1,
+          arc_fl1_1,
           fl2,
+          
           pillar_fl2_detail1,
           pillar_fl3_detail1,
           pillar_fl4_detail1,
@@ -925,12 +1241,25 @@
           pillar_fl7_detail2,
           wall_fl2_3_4_5_6,
           arc_fl2,
+          
           arc_fl3,
           arc_fl4,
           arc_fl5,
           arc_fl6,
           arc_fl7,
           fl3,
+          fl2_class,
+          fl3_class,
+          fl4_class,
+          fl5_class,
+          fl6_class,
+          fl7_class,
+          arc_fl2_1,
+          arc_fl3_1,
+          arc_fl4_1,
+          arc_fl5_1,
+          arc_fl6_1,
+          arc_fl7_1,
           //continue
         ]
         });
